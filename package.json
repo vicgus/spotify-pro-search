@@ -8,9 +8,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "sass": "node-sass -w ./scss/index.sass ./assets/bundle.css",
+    "sass": "node-sass -w ./scss/index.sass bundle.css",
     "build": "npm run build:css && npm run build:js",
-    "build:css": "node-sass ./scss/index.sass ./assets/bundle.css",
+    "build:css": "node-sass ./scss/index.sass bundle.css",
     "build:js":"echo \"JS building not implemented yet\" "
   },
   "author": "",
