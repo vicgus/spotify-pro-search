@@ -1,8 +1,6 @@
 #Max own ignores
 .DS_Store
 
-assets/bundle.css
-assets/app.js
 
 # Logs
 logs

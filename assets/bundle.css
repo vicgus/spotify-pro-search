@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.container_bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 89px;
+  width: 1440px;
+  background-image: url("./img/player.png");
+  background-size: contain; }
+
+.container_left {
+  position: relative;
+  float: left;
+  height: 800px;
+  width: 200px;
+  background-color: #121212; }
+
+.container_right {
+  position: relative;
+  float: left;
+  height: 800px;
+  width: 350px;
+  background-color: #121212; }
+
+.container_middle {
+  position: relative;
+  float: left;
+  height: 800px;
+  width: 890px;
+  background-color: green; }
+
+.list-group {
+  position: relative;
+  padding-left: 0px;
+  margin-top: 30px;
+  font-size: 0.8em;
+  font-weight: 100;
+  color: #afafaf;
+  text-indent: 14px;
+  letter-spacing: 0.15em;
+  list-style-type: none; }
+
+.list-group-item {
+  margin-top: 15px;
+  border-width: 5px;
+  border-left: 4px solid #121212;
+  font-weight: 700;
+  letter-spacing: 0.0em;
+  text-indent: 10px; }
+  .list-group-item:hover {
+    color: white;
+    cursor: pointer; }
+  .list-group-item.active {
+    color: white;
+    border-left: 4px solid #2fd566; }
+
+* {
+  font-family: 'Montserrat', sans-serif; }
