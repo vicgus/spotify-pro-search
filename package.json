@@ -1,0 +1,18 @@
+{
+  "name": "pro-search-spotify",
+  "version": "1.0.0",
+  "description": "DM2601 HT17-1 Media Technology and Interaction Design at KTH. Group B2.",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "node-sass -w ./scss/index.sass ./assets/bundle.css",
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "node-sass ./scss/index.sass ./assets/bundle.css",
+    "build:js":"echo \"JS building not implemented yet\" "
+  },
+  "author": "",
+  "license": "ISC"
+}
