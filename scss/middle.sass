@@ -1,0 +1,133 @@
+$top_height: 590px
+$bottom_height: 120px
+$bar_height: 40px
+
+.middle_top
+    position: relative
+    margin: 0
+    padding: 0
+    
+    height: $top_height
+    width: 100%
+
+.waveform
+    position: absolute
+    left: 20px
+    bottom: 20px
+    height: 100px
+    
+    z-index: 7
+    
+.background
+    position: absolute
+    left: 0
+    top: 0
+    width: 960px
+    margin: -5px
+    padding: 5px
+    height: $top_height
+    background-image: url("img/cover4.jpg")
+    background-size: cover
+    -webkit-filter: blur(3px)
+    
+    z-index: 1
+
+
+.trackinfo-group
+    position: absolute
+    margin: 15px
+    padding: 15px
+    
+    
+    color: white
+    z-index: 99
+    list-style-type: none
+    
+    background-color: rgba(216,216,216,0.50)
+    
+.trackinfo-item
+    height: 30px
+    width: 100%
+    color: white
+    line-height: 30px
+
+    .attribute
+        text-transform: uppercase
+        float: left
+        width: 110px
+    
+    .value
+        float: left
+
+.middle_bar
+    position: relative
+    margin-top: 0
+    height: $bar_height
+    width: 100%
+    
+    background-color: black
+    
+    z-index: 99
+    
+    color: rgb(175,175,175)
+    
+    .suggestion
+        position: absolute
+        
+        margin: 0
+        padding: 0
+        left: 20px
+        top: 0
+        text-indent: 20px
+        
+        font-size: 15px
+        line-height: $bar_height
+        
+    .info
+        position: absolute
+        
+        margin: 0
+        padding: 0
+        right: 20px
+        top: 0
+        text-indent: 20px
+        
+        font-size: 15px
+        line-height: $bar_height
+       
+.middle_bottom
+    position: relative
+    margin-top: 0
+    height: $bottom_height
+    width: 100%
+    
+    background-color: black
+    
+    z-index: 99
+    
+
+        
+    .recommended
+        position: relative
+        
+        margin-top: ($bottom_height - 90px) / 2
+        margin-bottom: ($bottom_height - 90px) / 2
+        margin-left: 37px
+        
+        width: 90px
+        height: 90px
+        
+        border: 1px solid black
+        
+        &:hover
+            border: 1px solid white
+        
+        /*&:first-child
+                margin-top: ($bottom_height - 135px) / 2
+                margin-bottom: ($bottom_height - 135px) / 2
+                
+                width: 135px
+                height: 135px */
+        
+        
+        

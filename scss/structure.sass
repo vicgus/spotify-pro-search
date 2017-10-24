@@ -1,4 +1,6 @@
-$height: 800px
+$height: 750px
+$left_column: 200px
+$right_column: 280px
 
 .container_bottom
     position: fixed
@@ -16,15 +18,17 @@ $height: 800px
     position: relative
     float: left
     height: $height
-    width: 200px
-    
+    width: $left_column
+    z-index: 2
     background-color: rgb(18,18,18)
     
 .container_right
     position: relative
     float: left
     height: $height
-    width: 350px
+    width: $right_column
+    
+    z-index: 2
     
     background-color: rgb(18,18,18)
     
@@ -32,8 +36,7 @@ $height: 800px
     position: relative
     float: left
     height: $height
-    width: 890px
-    background-color: rgb(175,175,175)
+    width: 960px
         
 .container_middle__top
     

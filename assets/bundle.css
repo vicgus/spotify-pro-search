@@ -15,25 +15,26 @@ body {
 .container_left {
   position: relative;
   float: left;
-  height: 800px;
+  height: 750px;
   width: 200px;
+  z-index: 2;
   background-color: #121212; }
 
 .container_right {
   position: relative;
   float: left;
-  height: 800px;
-  width: 350px;
+  height: 750px;
+  width: 280px;
+  z-index: 2;
   background-color: #121212; }
 
 .container_middle {
   position: relative;
   float: left;
-  height: 800px;
-  width: 890px;
-  background-color: #afafaf; }
+  height: 750px;
+  width: 960px; }
 
-.list-group {
+.menu-group {
   position: relative;
   padding-left: 0px;
   margin-top: 30px;
@@ -44,25 +45,194 @@ body {
   letter-spacing: 0.15em;
   list-style-type: none; }
 
-.list-group-item {
+.menu-group-item {
   margin-top: 15px;
   border-width: 5px;
   border-left: 4px solid #121212;
   font-weight: 700;
   letter-spacing: 0.0em;
   text-indent: 10px; }
-  .list-group-item:hover {
+  .menu-group-item:hover {
     color: white;
     cursor: pointer; }
-  .list-group-item.active {
+  .menu-group-item.active {
     color: white;
     border-left: 4px solid #2fd566; }
 
 .right_title {
   margin: 15px;
+  margin-top: 360px;
   padding-bottom: 10px;
   color: white;
   border-bottom: 1px solid #afafaf; }
+
+.filter-group {
+  padding: 0;
+  margin-left: 15px;
+  list-style-type: none; }
+
+.filter-item {
+  padding: 0;
+  margin-top: 5px;
+  height: 34px; }
+
+.filter-description {
+  margin: 0 0 0 10px;
+  padding: 0;
+  color: white;
+  position: relative;
+  float: left;
+  height: 24px;
+  line-height: 24px;
+  font-size: 16px; }
+
+/* Hide default HTML checkbox */
+.filter-switch input {
+  display: none; }
+
+.filter-switch {
+  margin: 0 5px;
+  position: relative;
+  float: left;
+  display: inline-block;
+  width: 50px;
+  height: 24px; }
+
+/* The slider */
+.filter-switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s; }
+
+/* The sliding circle */
+.filter-switch-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%; }
+
+input:checked + .filter-switch-slider {
+  background-color: #2196F3; }
+
+input:checked + .filter-switch-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px); }
+
+/* Rounded sliders */
+.filter-switch-slider {
+  border-radius: 34px; }
+
+.middle_top {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 590px;
+  width: 100%; }
+
+.waveform {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  height: 100px;
+  z-index: 7; }
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 960px;
+  margin: -5px;
+  padding: 5px;
+  height: 590px;
+  background-image: url("img/cover4.jpg");
+  background-size: cover;
+  -webkit-filter: blur(3px);
+  z-index: 1; }
+
+.trackinfo-group {
+  position: absolute;
+  margin: 15px;
+  padding: 15px;
+  color: white;
+  z-index: 99;
+  list-style-type: none;
+  background-color: rgba(216, 216, 216, 0.5); }
+
+.trackinfo-item {
+  height: 30px;
+  width: 100%;
+  color: white;
+  line-height: 30px; }
+  .trackinfo-item .attribute {
+    text-transform: uppercase;
+    float: left;
+    width: 110px; }
+  .trackinfo-item .value {
+    float: left; }
+
+.middle_bar {
+  position: relative;
+  margin-top: 0;
+  height: 40px;
+  width: 100%;
+  background-color: black;
+  z-index: 99;
+  color: #afafaf; }
+  .middle_bar .suggestion {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 20px;
+    top: 0;
+    text-indent: 20px;
+    font-size: 15px;
+    line-height: 40px; }
+  .middle_bar .info {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    right: 20px;
+    top: 0;
+    text-indent: 20px;
+    font-size: 15px;
+    line-height: 40px; }
+
+.middle_bottom {
+  position: relative;
+  margin-top: 0;
+  height: 120px;
+  width: 100%;
+  background-color: black;
+  z-index: 99; }
+  .middle_bottom .recommended {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 37px;
+    width: 90px;
+    height: 90px;
+    border: 1px solid black;
+    /*&:first-child
+                margin-top: ($bottom_height - 135px) / 2
+                margin-bottom: ($bottom_height - 135px) / 2
+
+                width: 135px
+                height: 135px */ }
+    .middle_bottom .recommended:hover {
+      border: 1px solid white; }
 
 * {
   font-family: 'Montserrat', sans-serif; }
