@@ -24,7 +24,7 @@ class MainView extends React.Component {
             <section className="container_left">
                 <ul className="menu-group">
                     <li className="menu-group-item">Browse</li>
-                    <li className="menu-group-item active">Radio</li>
+                    <li className="menu-group-item active">Pro-Radio</li>
                 </ul>
                 <ul className="menu-group">
                     YOUR LIBRARY
@@ -44,7 +44,7 @@ class MainView extends React.Component {
             </section>
 
             <section className="container_right">
-                <h3 class="right_title"> Filters </h3>
+                <h3 className="right_title"> Filters </h3>
                 <FilterView dataStore={dataStore} />
             </section>
 

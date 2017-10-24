@@ -21,6 +21,7 @@ class CurrentSongView extends React.Component {
             <section className="background" style={divStyle} ></section>
             
             <ul className="trackinfo-group">
+                <h3> CURRENT TRACK </h3>
                 <li className="trackinfo-item">
                     <span className="attribute"> Title: </span>
                     <span className="value"> {currentTrack.title}</span>

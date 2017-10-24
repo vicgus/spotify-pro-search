@@ -10,11 +10,31 @@ class UpcomingSingleTrack extends React.Component {
         this.props.parent.props.dataStore.setSelectedTrackId(this.props.track.id);
     }
     
+    mouseOver() {
+        this.props.parent.setState({
+            hoverTrack: {
+                title: this.props.track.title,
+                artist: this.props.track.artist
+            }
+        })
+        
+    }
+    
+    mouseOut(){
+        this.props.parent.setState({
+            hoverTrack: {
+                title: "",
+                artist: ""
+            }
+        })
+        
+    }
+    
     render(){
         console.log("UpcomingSingleTrack rendering!");
         var src = this.props.track.albumcover;
         return (
-            <img onClick={this.clicked.bind(this)} className="recommended" src={"assets/img/" + src} />
+            <img onClick={this.clicked.bind(this)} onMouseOver={this.mouseOver.bind(this)} onMouseOut={this.mouseOut.bind(this)} className="recommended" src={"assets/img/" + src} />
 
         )
     }
@@ -26,6 +46,13 @@ class UpcomingView extends React.Component {
         super(props);
         
         this.props.dataStore.connect(this);
+        
+        this.state = {
+            hoverTrack: {
+                title: "",
+                artist: ""
+            }
+        };
     }
     
     render() {
@@ -36,7 +63,7 @@ class UpcomingView extends React.Component {
         return (
             <section>
                 <section className="middle_bar">
-                    <h2 className="suggestion"> Upcoming: TITLE - ARTIST</h2>
+                    <h2 className="suggestion">{this.state.hoverTrack.title} - {this.state.hoverTrack.artist}</h2>
                     <h2 className="info"> {upcoming.matches} matches / {upcoming.filtered} filtered</h2>
                 </section>
                 <section className="middle_bottom">

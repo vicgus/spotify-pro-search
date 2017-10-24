@@ -21233,7 +21233,7 @@ var MainView = function (_React$Component) {
                         _react2.default.createElement(
                             "li",
                             { className: "menu-group-item active" },
-                            "Radio"
+                            "Pro-Radio"
                         )
                     ),
                     _react2.default.createElement(
@@ -21278,7 +21278,7 @@ var MainView = function (_React$Component) {
                     { className: "container_right" },
                     _react2.default.createElement(
                         "h3",
-                        { "class": "right_title" },
+                        { className: "right_title" },
                         " Filters "
                     ),
                     _react2.default.createElement(FilterView, { dataStore: dataStore })
@@ -23590,6 +23590,11 @@ var CurrentSongView = function (_React$Component) {
                     'ul',
                     { className: 'trackinfo-group' },
                     _react2.default.createElement(
+                        'h3',
+                        null,
+                        ' CURRENT TRACK '
+                    ),
+                    _react2.default.createElement(
                         'li',
                         { className: 'trackinfo-item' },
                         _react2.default.createElement(
@@ -23745,11 +23750,31 @@ var UpcomingSingleTrack = function (_React$Component) {
             this.props.parent.props.dataStore.setSelectedTrackId(this.props.track.id);
         }
     }, {
+        key: "mouseOver",
+        value: function mouseOver() {
+            this.props.parent.setState({
+                hoverTrack: {
+                    title: this.props.track.title,
+                    artist: this.props.track.artist
+                }
+            });
+        }
+    }, {
+        key: "mouseOut",
+        value: function mouseOut() {
+            this.props.parent.setState({
+                hoverTrack: {
+                    title: "",
+                    artist: ""
+                }
+            });
+        }
+    }, {
         key: "render",
         value: function render() {
             console.log("UpcomingSingleTrack rendering!");
             var src = this.props.track.albumcover;
-            return _react2.default.createElement("img", { onClick: this.clicked.bind(this), className: "recommended", src: "assets/img/" + src });
+            return _react2.default.createElement("img", { onClick: this.clicked.bind(this), onMouseOver: this.mouseOver.bind(this), onMouseOut: this.mouseOut.bind(this), className: "recommended", src: "assets/img/" + src });
         }
     }]);
 
@@ -23765,6 +23790,13 @@ var UpcomingView = function (_React$Component2) {
         var _this2 = _possibleConstructorReturn(this, (UpcomingView.__proto__ || Object.getPrototypeOf(UpcomingView)).call(this, props));
 
         _this2.props.dataStore.connect(_this2);
+
+        _this2.state = {
+            hoverTrack: {
+                title: "",
+                artist: ""
+            }
+        };
         return _this2;
     }
 
@@ -23784,7 +23816,9 @@ var UpcomingView = function (_React$Component2) {
                     _react2.default.createElement(
                         "h2",
                         { className: "suggestion" },
-                        " Upcoming: TITLE - ARTIST"
+                        this.state.hoverTrack.title,
+                        " - ",
+                        this.state.hoverTrack.artist
                     ),
                     _react2.default.createElement(
                         "h2",
