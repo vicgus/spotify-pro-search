@@ -4,7 +4,7 @@ titles = titles.split(" ");
 console.log("titles", titles.length);
 //200 titles
 var artists = ["Cari Lekebusch", "Kerri Chandler", "Fluxion", "Seb Zito","Etapp Kyle", "Michael", "Dave Chappelle", "Coop-Victor"];
-//5 artists
+//7 artists
 var albums = "debitis rerum necessitatibus saepe eveniet voluptates repudiandae molestiae recusandae Itaque earum rerum tenetur sapiente delectus reiciendis voluptatibus maiores alias consequatur easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best"
 var albums = albums.split(" ");
 //47 albums
@@ -70,9 +70,11 @@ titles.map(function(title, index){
     //bpm kan slumpas per låt
     
     jsonData.push({
+        id: titleInt,
         title: titles[titleInt],
         artist: artists[artistInt],
         album: albums[albumInt],
+        albumcover: "cover" + albumInt + ".jpg",
         label: labels[labelInt],
         year: years[yearInt],
         genre: genres[genreInt],

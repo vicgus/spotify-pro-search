@@ -1,4 +1,4 @@
-module.exports = [
+[
     {
         "id": 0,
         "title": "But",
@@ -2118,4 +2118,4 @@ module.exports = [
         "key": "6A",
         "bpm": 107
     }
-];
+]

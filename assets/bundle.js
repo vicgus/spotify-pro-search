@@ -360,6 +360,21 @@ module.exports = invariant;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(16);
+} else {
+  module.exports = __webpack_require__(17);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /*
 object-assign
 (c) Sindre Sorhus
@@ -451,21 +466,6 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 	return to;
 };
 
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(16);
-} else {
-  module.exports = __webpack_require__(17);
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 5 */
@@ -959,7 +959,7 @@ module.exports = getActiveElement;
 "use strict";
 
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -967,12 +967,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var ReactDOM = __webpack_require__(18);
 
-var FilterView = __webpack_require__(32);
-var CurrentSongView = __webpack_require__(33);
+var MainView = __webpack_require__(32);
 
-ReactDOM.render(_react2.default.createElement(FilterView, null), document.getElementById("filters"));
-
-ReactDOM.render(_react2.default.createElement(CurrentSongView, null), document.getElementById("currentSongView"));
+ReactDOM.render(_react2.default.createElement(MainView, null), document.getElementById("body"));
 
 /***/ }),
 /* 16 */
@@ -988,7 +985,7 @@ ReactDOM.render(_react2.default.createElement(CurrentSongView, null), document.g
  This source code is licensed under the MIT license found in the
  LICENSE file in the root directory of this source tree.
 */
-var f=__webpack_require__(3),p=__webpack_require__(5);__webpack_require__(2);var r=__webpack_require__(1);
+var f=__webpack_require__(4),p=__webpack_require__(5);__webpack_require__(2);var r=__webpack_require__(1);
 function t(a){for(var b=arguments.length-1,d="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,e=0;e<b;e++)d+="\x26args[]\x3d"+encodeURIComponent(arguments[e+1]);b=Error(d+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var u={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function v(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}v.prototype.isReactComponent={};v.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?t("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};v.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function w(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}function x(){}x.prototype=v.prototype;var y=w.prototype=new x;y.constructor=w;f(y,v.prototype);y.isPureReactComponent=!0;function z(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}var A=z.prototype=new x;A.constructor=z;f(A,v.prototype);A.unstable_isAsyncReactComponent=!0;A.render=function(){return this.props.children};
@@ -1025,7 +1022,7 @@ if (process.env.NODE_ENV !== "production") {
 
 'use strict';
 
-var objectAssign$1 = __webpack_require__(3);
+var objectAssign$1 = __webpack_require__(4);
 var require$$0 = __webpack_require__(6);
 var emptyObject = __webpack_require__(5);
 var invariant = __webpack_require__(2);
@@ -2771,7 +2768,7 @@ if (process.env.NODE_ENV === 'production') {
  LICENSE file in the root directory of this source tree.
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(4);__webpack_require__(2);var l=__webpack_require__(9),n=__webpack_require__(3),ba=__webpack_require__(10),ca=__webpack_require__(1),da=__webpack_require__(5),ea=__webpack_require__(11),fa=__webpack_require__(12),ha=__webpack_require__(13),ia=__webpack_require__(14);
+var aa=__webpack_require__(3);__webpack_require__(2);var l=__webpack_require__(9),n=__webpack_require__(4),ba=__webpack_require__(10),ca=__webpack_require__(1),da=__webpack_require__(5),ea=__webpack_require__(11),fa=__webpack_require__(12),ha=__webpack_require__(13),ia=__webpack_require__(14);
 function w(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:w("227");
 function ja(a){switch(a){case "svg":return"http://www.w3.org/2000/svg";case "math":return"http://www.w3.org/1998/Math/MathML";default:return"http://www.w3.org/1999/xhtml"}}
 var ka={Namespaces:{html:"http://www.w3.org/1999/xhtml",mathml:"http://www.w3.org/1998/Math/MathML",svg:"http://www.w3.org/2000/svg"},getIntrinsicNamespace:ja,getChildNamespace:function(a,b){return null==a||"http://www.w3.org/1999/xhtml"===a?ja(b):"http://www.w3.org/2000/svg"===a&&"foreignObject"===b?"http://www.w3.org/1999/xhtml":a}},la=null,oa={};
@@ -3096,10 +3093,10 @@ if (process.env.NODE_ENV !== "production") {
 
 'use strict';
 
-var react = __webpack_require__(4);
+var react = __webpack_require__(3);
 var invariant = __webpack_require__(2);
 var ExecutionEnvironment = __webpack_require__(9);
-var _assign = __webpack_require__(3);
+var _assign = __webpack_require__(4);
 var EventListener = __webpack_require__(10);
 var require$$0 = __webpack_require__(6);
 var hyphenateStyleName = __webpack_require__(23);
@@ -20575,7 +20572,7 @@ if (process.env.NODE_ENV !== 'production') {
 var emptyFunction = __webpack_require__(1);
 var invariant = __webpack_require__(2);
 var warning = __webpack_require__(6);
-var assign = __webpack_require__(3);
+var assign = __webpack_require__(4);
 
 var ReactPropTypesSecret = __webpack_require__(8);
 var checkPropTypes = __webpack_require__(7);
@@ -21182,7 +21179,2199 @@ module.exports = function() {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var dataStore = __webpack_require__(33);
+
+var FilterView = __webpack_require__(35);
+var CurrentSongView = __webpack_require__(36);
+var UpcomingView = __webpack_require__(37);
+
+var MainView = function (_React$Component) {
+    _inherits(MainView, _React$Component);
+
+    function MainView(props) {
+        _classCallCheck(this, MainView);
+
+        var _this = _possibleConstructorReturn(this, (MainView.__proto__ || Object.getPrototypeOf(MainView)).call(this, props));
+
+        _this.state = {
+            upcoming: dataStore.getUpcoming(),
+            selectedTrack: dataStore.getSelectedTrack()
+        };
+        return _this;
+    }
+
+    _createClass(MainView, [{
+        key: "render",
+        value: function render() {
+
+            return _react2.default.createElement(
+                "section",
+                null,
+                _react2.default.createElement(
+                    "section",
+                    { className: "container_left" },
+                    _react2.default.createElement(
+                        "ul",
+                        { className: "menu-group" },
+                        _react2.default.createElement(
+                            "li",
+                            { className: "menu-group-item" },
+                            "Browse"
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "menu-group-item active" },
+                            "Radio"
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "ul",
+                        { className: "menu-group" },
+                        "YOUR LIBRARY",
+                        _react2.default.createElement(
+                            "li",
+                            { className: "menu-group-item" },
+                            "Recently Played"
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "menu-group-item" },
+                            "Songs"
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "ul",
+                        { className: "menu-group" },
+                        "PLAYLISTS",
+                        _react2.default.createElement(
+                            "li",
+                            { className: "menu-group-item" },
+                            "St\xE4da"
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "menu-group-item" },
+                            "T\xE4nka"
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "section",
+                    { className: "container_middle", id: "currentSongView" },
+                    _react2.default.createElement(CurrentSongView, { dataStore: dataStore }),
+                    _react2.default.createElement(UpcomingView, { dataStore: dataStore })
+                ),
+                _react2.default.createElement(
+                    "section",
+                    { className: "container_right" },
+                    _react2.default.createElement(
+                        "h3",
+                        { "class": "right_title" },
+                        " Filters "
+                    ),
+                    _react2.default.createElement(FilterView, { dataStore: dataStore })
+                ),
+                _react2.default.createElement("section", { className: "container_bottom" })
+            );
+        }
+    }]);
+
+    return MainView;
+}(_react2.default.Component);
+
+;
+
+module.exports = MainView;
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var data = __webpack_require__(34);
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
+module.exports = {
+
+    selectedTrackId: 0,
+    selectedTrack: data[50],
+
+    filters: {
+        album: false,
+        artist: true,
+        label: false,
+        genre: false,
+        producer: false,
+        bpm: false,
+        key: false,
+        year: false
+    },
+
+    elements: [],
+
+    getUpcoming: function getUpcoming() {
+
+        //get the current track (to compare against)
+        var currentTrack = this.selectedTrack;
+
+        //Parse out which filters are activated
+        var self = this;
+        var activeFilters = [];
+        Object.keys(this.filters).map(function (key, index) {
+            if (self.filters[key] === true) {
+                activeFilters.push(key);
+            } else {
+                return;
+            }
+        });
+
+        //Compare the tracks against the current track if a filter is active 
+        var filteredTracks = data.filter(function (track) {
+            if (track.id === currentTrack.id) {
+                return false;
+            }
+
+            var testAgainstActiveFilters = activeFilters.map(function (filter) {
+                if (track[filter] === currentTrack[filter]) {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+            if (testAgainstActiveFilters.includes(false)) {
+                return false;
+            } else {
+                return true;
+            }
+        });
+        console.log(filteredTracks);
+        var matches = filteredTracks.length;
+        var filtered = data.length - matches;
+        var tracks = filteredTracks.slice(0, 7);
+        return {
+            tracks: tracks,
+            matches: matches,
+            filtered: filtered
+        };
+    },
+    toggleFilter: function toggleFilter(filter) {
+        this.filters[filter] = !this.filters[filter];
+        this.forceRenders();
+    },
+    getFilters: function getFilters() {
+        return this.filters;
+    },
+    setSelectedTrackId: function setSelectedTrackId(id) {
+        this.selectedTrack = data[id];
+        this.forceRenders();
+    },
+    getSelectedTrack: function getSelectedTrack() {
+        return this.selectedTrack;
+    },
+    connect: function connect(element) {
+        this.elements.push(element);
+    },
+    applyFilters: function applyFilters(filters) {},
+    forceRenders: function forceRenders() {
+        this.elements.map(function (element) {
+            console.log("Should render!");
+            element.forceUpdate();
+        });
+    }
+};
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = [{
+    "id": 0,
+    "title": "But",
+    "artist": "Cari Lekebusch",
+    "album": "debitis",
+    "albumcover": "cover0.jpg",
+    "label": "Berg Audio",
+    "year": 2005,
+    "genre": "House",
+    "producer": "Adam A",
+    "key": "6A",
+    "bpm": 100
+}, {
+    "id": 1,
+    "title": "I",
+    "artist": "Cari Lekebusch",
+    "album": "debitis",
+    "albumcover": "cover0.jpg",
+    "label": "Berg Audio",
+    "year": 2005,
+    "genre": "House",
+    "producer": "Max Martin",
+    "key": "6A",
+    "bpm": 120
+}, {
+    "id": 2,
+    "title": "must",
+    "artist": "Cari Lekebusch",
+    "album": "debitis",
+    "albumcover": "cover0.jpg",
+    "label": "Berg Audio",
+    "year": 2005,
+    "genre": "House",
+    "producer": "Sam B",
+    "key": "7B",
+    "bpm": 100
+}, {
+    "id": 3,
+    "title": "explain",
+    "artist": "Cari Lekebusch",
+    "album": "debitis",
+    "albumcover": "cover0.jpg",
+    "label": "Berg Audio",
+    "year": 2005,
+    "genre": "House",
+    "producer": "Adam A",
+    "key": "6A",
+    "bpm": 100
+}, {
+    "id": 4,
+    "title": "to",
+    "artist": "Cari Lekebusch",
+    "album": "debitis",
+    "albumcover": "cover0.jpg",
+    "label": "Berg Audio",
+    "year": 2005,
+    "genre": "House",
+    "producer": "Andreas Carlson",
+    "key": "6A",
+    "bpm": 100
+}, {
+    "id": 5,
+    "title": "you",
+    "artist": "Cari Lekebusch",
+    "album": "rerum",
+    "albumcover": "cover1.jpg",
+    "label": "Berg Audio",
+    "year": 2005,
+    "genre": "Minimal House",
+    "producer": "Sam B",
+    "key": "7B",
+    "bpm": 105
+}, {
+    "id": 6,
+    "title": "how",
+    "artist": "Cari Lekebusch",
+    "album": "rerum",
+    "albumcover": "cover1.jpg",
+    "label": "Berg Audio",
+    "year": 2005,
+    "genre": "Minimal House",
+    "producer": "Max Martin",
+    "key": "12A",
+    "bpm": 105
+}, {
+    "id": 7,
+    "title": "all",
+    "artist": "Cari Lekebusch",
+    "album": "rerum",
+    "albumcover": "cover1.jpg",
+    "label": "Berg Audio",
+    "year": 2005,
+    "genre": "Minimal House",
+    "producer": "Andreas Carlson",
+    "key": "7B",
+    "bpm": 100
+}, {
+    "id": 8,
+    "title": "this",
+    "artist": "Cari Lekebusch",
+    "album": "rerum",
+    "albumcover": "cover1.jpg",
+    "label": "Berg Audio",
+    "year": 2005,
+    "genre": "Minimal House",
+    "producer": "Daniel G",
+    "key": "8B",
+    "bpm": 105
+}, {
+    "id": 9,
+    "title": "mistaken",
+    "artist": "Cari Lekebusch",
+    "album": "rerum",
+    "albumcover": "cover1.jpg",
+    "label": "Berg Audio",
+    "year": 2005,
+    "genre": "Minimal House",
+    "producer": "Daniel G",
+    "key": "7B",
+    "bpm": 100
+}, {
+    "id": 10,
+    "title": "idea",
+    "artist": "Cari Lekebusch",
+    "album": "necessitatibus",
+    "albumcover": "cover2.jpg",
+    "label": "Recordeep",
+    "year": 2005,
+    "genre": "Dub-Techno",
+    "producer": "Sam B",
+    "key": "8B",
+    "bpm": 100
+}, {
+    "id": 11,
+    "title": "of",
+    "artist": "Cari Lekebusch",
+    "album": "necessitatibus",
+    "albumcover": "cover2.jpg",
+    "label": "Recordeep",
+    "year": 2005,
+    "genre": "Dub-Techno",
+    "producer": "Andreas Carlson",
+    "key": "6A",
+    "bpm": 107
+}, {
+    "id": 12,
+    "title": "denouncing",
+    "artist": "Cari Lekebusch",
+    "album": "necessitatibus",
+    "albumcover": "cover2.jpg",
+    "label": "Recordeep",
+    "year": 2005,
+    "genre": "Dub-Techno",
+    "producer": "LRG",
+    "key": "7B",
+    "bpm": 100
+}, {
+    "id": 13,
+    "title": "pleasure",
+    "artist": "Cari Lekebusch",
+    "album": "necessitatibus",
+    "albumcover": "cover2.jpg",
+    "label": "Recordeep",
+    "year": 2005,
+    "genre": "Dub-Techno",
+    "producer": "Sam B",
+    "key": "8B",
+    "bpm": 120
+}, {
+    "id": 14,
+    "title": "and",
+    "artist": "Cari Lekebusch",
+    "album": "necessitatibus",
+    "albumcover": "cover2.jpg",
+    "label": "Recordeep",
+    "year": 2005,
+    "genre": "Dub-Techno",
+    "producer": "Daniel G",
+    "key": "12A",
+    "bpm": 105
+}, {
+    "id": 15,
+    "title": "praising",
+    "artist": "Cari Lekebusch",
+    "album": "saepe",
+    "albumcover": "cover3.jpg",
+    "label": "Echochord",
+    "year": 2000,
+    "genre": "Dub-Techno",
+    "producer": "Martin Solveig",
+    "key": "12A",
+    "bpm": 107
+}, {
+    "id": 16,
+    "title": "pain",
+    "artist": "Cari Lekebusch",
+    "album": "saepe",
+    "albumcover": "cover3.jpg",
+    "label": "Echochord",
+    "year": 2000,
+    "genre": "Dub-Techno",
+    "producer": "Sam B",
+    "key": "7B",
+    "bpm": 107
+}, {
+    "id": 17,
+    "title": "was",
+    "artist": "Cari Lekebusch",
+    "album": "saepe",
+    "albumcover": "cover3.jpg",
+    "label": "Echochord",
+    "year": 2000,
+    "genre": "Dub-Techno",
+    "producer": "Andreas Carlson",
+    "key": "7B",
+    "bpm": 107
+}, {
+    "id": 18,
+    "title": "born",
+    "artist": "Cari Lekebusch",
+    "album": "saepe",
+    "albumcover": "cover3.jpg",
+    "label": "Echochord",
+    "year": 2000,
+    "genre": "Dub-Techno",
+    "producer": "Adam A",
+    "key": "12A",
+    "bpm": 107
+}, {
+    "id": 19,
+    "title": "and",
+    "artist": "Cari Lekebusch",
+    "album": "saepe",
+    "albumcover": "cover3.jpg",
+    "label": "Echochord",
+    "year": 2000,
+    "genre": "Dub-Techno",
+    "producer": "Andreas Carlson",
+    "key": "8B",
+    "bpm": 100
+}, {
+    "id": 20,
+    "title": "I",
+    "artist": "Cari Lekebusch",
+    "album": "eveniet",
+    "albumcover": "cover4.jpg",
+    "label": "Berg Audio",
+    "year": 1990,
+    "genre": "Techno",
+    "producer": "Adam A",
+    "key": "8B",
+    "bpm": 105
+}, {
+    "id": 21,
+    "title": "will",
+    "artist": "Cari Lekebusch",
+    "album": "eveniet",
+    "albumcover": "cover4.jpg",
+    "label": "Berg Audio",
+    "year": 1990,
+    "genre": "Techno",
+    "producer": "Martin Solveig",
+    "key": "6A",
+    "bpm": 100
+}, {
+    "id": 22,
+    "title": "give",
+    "artist": "Cari Lekebusch",
+    "album": "eveniet",
+    "albumcover": "cover4.jpg",
+    "label": "Berg Audio",
+    "year": 1990,
+    "genre": "Techno",
+    "producer": "Martin Solveig",
+    "key": "7B",
+    "bpm": 120
+}, {
+    "id": 23,
+    "title": "you",
+    "artist": "Kerri Chandler",
+    "album": "eveniet",
+    "albumcover": "cover4.jpg",
+    "label": "Berg Audio",
+    "year": 1990,
+    "genre": "Techno",
+    "producer": "Max Martin",
+    "key": "6A",
+    "bpm": 100
+}, {
+    "id": 24,
+    "title": "a",
+    "artist": "Kerri Chandler",
+    "album": "eveniet",
+    "albumcover": "cover4.jpg",
+    "label": "Berg Audio",
+    "year": 1990,
+    "genre": "Techno",
+    "producer": "Adam A",
+    "key": "12A",
+    "bpm": 120
+}, {
+    "id": 25,
+    "title": "complete",
+    "artist": "Kerri Chandler",
+    "album": "voluptates",
+    "albumcover": "cover5.jpg",
+    "label": "Star Dub",
+    "year": 2000,
+    "genre": "Acid",
+    "producer": "LRG",
+    "key": "6A",
+    "bpm": 107
+}, {
+    "id": 26,
+    "title": "account",
+    "artist": "Kerri Chandler",
+    "album": "voluptates",
+    "albumcover": "cover5.jpg",
+    "label": "Star Dub",
+    "year": 2000,
+    "genre": "Acid",
+    "producer": "Max Martin",
+    "key": "12A",
+    "bpm": 105
+}, {
+    "id": 27,
+    "title": "of",
+    "artist": "Kerri Chandler",
+    "album": "voluptates",
+    "albumcover": "cover5.jpg",
+    "label": "Star Dub",
+    "year": 2000,
+    "genre": "Acid",
+    "producer": "LRG",
+    "key": "12A",
+    "bpm": 107
+}, {
+    "id": 28,
+    "title": "the",
+    "artist": "Kerri Chandler",
+    "album": "voluptates",
+    "albumcover": "cover5.jpg",
+    "label": "Star Dub",
+    "year": 2000,
+    "genre": "Acid",
+    "producer": "Martin Solveig",
+    "key": "6A",
+    "bpm": 107
+}, {
+    "id": 29,
+    "title": "system,",
+    "artist": "Kerri Chandler",
+    "album": "voluptates",
+    "albumcover": "cover5.jpg",
+    "label": "Star Dub",
+    "year": 2000,
+    "genre": "Acid",
+    "producer": "Adam A",
+    "key": "12A",
+    "bpm": 107
+}, {
+    "id": 30,
+    "title": "and",
+    "artist": "Kerri Chandler",
+    "album": "repudiandae",
+    "albumcover": "cover6.jpg",
+    "label": "Star Dub",
+    "year": 2000,
+    "genre": "Dub-Techno",
+    "producer": "Daniel G",
+    "key": "6A",
+    "bpm": 120
+}, {
+    "id": 31,
+    "title": "expound",
+    "artist": "Kerri Chandler",
+    "album": "repudiandae",
+    "albumcover": "cover6.jpg",
+    "label": "Star Dub",
+    "year": 2000,
+    "genre": "Dub-Techno",
+    "producer": "Martin Solveig",
+    "key": "6A",
+    "bpm": 100
+}, {
+    "id": 32,
+    "title": "the",
+    "artist": "Kerri Chandler",
+    "album": "repudiandae",
+    "albumcover": "cover6.jpg",
+    "label": "Star Dub",
+    "year": 2000,
+    "genre": "Dub-Techno",
+    "producer": "Adam A",
+    "key": "7B",
+    "bpm": 105
+}, {
+    "id": 33,
+    "title": "actual",
+    "artist": "Kerri Chandler",
+    "album": "repudiandae",
+    "albumcover": "cover6.jpg",
+    "label": "Star Dub",
+    "year": 2000,
+    "genre": "Dub-Techno",
+    "producer": "Max Martin",
+    "key": "8B",
+    "bpm": 120
+}, {
+    "id": 34,
+    "title": "teachings",
+    "artist": "Kerri Chandler",
+    "album": "repudiandae",
+    "albumcover": "cover6.jpg",
+    "label": "Star Dub",
+    "year": 2000,
+    "genre": "Dub-Techno",
+    "producer": "Martin Solveig",
+    "key": "12A",
+    "bpm": 105
+}, {
+    "id": 35,
+    "title": "of",
+    "artist": "Kerri Chandler",
+    "album": "molestiae",
+    "albumcover": "cover7.jpg",
+    "label": "Porslin Records",
+    "year": 1990,
+    "genre": "Minimal House",
+    "producer": "Martin Solveig",
+    "key": "12A",
+    "bpm": 120
+}, {
+    "id": 36,
+    "title": "the",
+    "artist": "Kerri Chandler",
+    "album": "molestiae",
+    "albumcover": "cover7.jpg",
+    "label": "Porslin Records",
+    "year": 1990,
+    "genre": "Minimal House",
+    "producer": "Martin Solveig",
+    "key": "6A",
+    "bpm": 107
+}, {
+    "id": 37,
+    "title": "great",
+    "artist": "Kerri Chandler",
+    "album": "molestiae",
+    "albumcover": "cover7.jpg",
+    "label": "Porslin Records",
+    "year": 1990,
+    "genre": "Minimal House",
+    "producer": "Max Martin",
+    "key": "6A",
+    "bpm": 105
+}, {
+    "id": 38,
+    "title": "explorer",
+    "artist": "Kerri Chandler",
+    "album": "molestiae",
+    "albumcover": "cover7.jpg",
+    "label": "Porslin Records",
+    "year": 1990,
+    "genre": "Minimal House",
+    "producer": "Sam B",
+    "key": "7B",
+    "bpm": 105
+}, {
+    "id": 39,
+    "title": "of",
+    "artist": "Kerri Chandler",
+    "album": "molestiae",
+    "albumcover": "cover7.jpg",
+    "label": "Porslin Records",
+    "year": 1990,
+    "genre": "Minimal House",
+    "producer": "Daniel G",
+    "key": "8B",
+    "bpm": 120
+}, {
+    "id": 40,
+    "title": "the",
+    "artist": "Kerri Chandler",
+    "album": "recusandae",
+    "albumcover": "cover8.jpg",
+    "label": "Star Dub",
+    "year": 2000,
+    "genre": "House",
+    "producer": "Daniel G",
+    "key": "7B",
+    "bpm": 105
+}, {
+    "id": 41,
+    "title": "truth,",
+    "artist": "Kerri Chandler",
+    "album": "recusandae",
+    "albumcover": "cover8.jpg",
+    "label": "Star Dub",
+    "year": 2000,
+    "genre": "House",
+    "producer": "Sam B",
+    "key": "7B",
+    "bpm": 120
+}, {
+    "id": 42,
+    "title": "the",
+    "artist": "Kerri Chandler",
+    "album": "recusandae",
+    "albumcover": "cover8.jpg",
+    "label": "Star Dub",
+    "year": 2000,
+    "genre": "House",
+    "producer": "Sam B",
+    "key": "6A",
+    "bpm": 105
+}, {
+    "id": 43,
+    "title": "master-builder",
+    "artist": "Kerri Chandler",
+    "album": "recusandae",
+    "albumcover": "cover8.jpg",
+    "label": "Star Dub",
+    "year": 2000,
+    "genre": "House",
+    "producer": "Daniel G",
+    "key": "8B",
+    "bpm": 100
+}, {
+    "id": 44,
+    "title": "of",
+    "artist": "Kerri Chandler",
+    "album": "recusandae",
+    "albumcover": "cover8.jpg",
+    "label": "Star Dub",
+    "year": 2000,
+    "genre": "House",
+    "producer": "LRG",
+    "key": "6A",
+    "bpm": 105
+}, {
+    "id": 45,
+    "title": "human",
+    "artist": "Kerri Chandler",
+    "album": "Itaque",
+    "albumcover": "cover9.jpg",
+    "label": "Star Dub",
+    "year": 1990,
+    "genre": "Techno",
+    "producer": "Adam A",
+    "key": "7B",
+    "bpm": 107
+}, {
+    "id": 46,
+    "title": "happiness.",
+    "artist": "Fluxion",
+    "album": "Itaque",
+    "albumcover": "cover9.jpg",
+    "label": "Star Dub",
+    "year": 1990,
+    "genre": "Techno",
+    "producer": "Adam A",
+    "key": "7B",
+    "bpm": 107
+}, {
+    "id": 47,
+    "title": "No",
+    "artist": "Fluxion",
+    "album": "Itaque",
+    "albumcover": "cover9.jpg",
+    "label": "Star Dub",
+    "year": 1990,
+    "genre": "Techno",
+    "producer": "LRG",
+    "key": "8B",
+    "bpm": 107
+}, {
+    "id": 48,
+    "title": "one",
+    "artist": "Fluxion",
+    "album": "Itaque",
+    "albumcover": "cover9.jpg",
+    "label": "Star Dub",
+    "year": 1990,
+    "genre": "Techno",
+    "producer": "Daniel G",
+    "key": "6A",
+    "bpm": 120
+}, {
+    "id": 49,
+    "title": "rejects,",
+    "artist": "Fluxion",
+    "album": "Itaque",
+    "albumcover": "cover9.jpg",
+    "label": "Star Dub",
+    "year": 1990,
+    "genre": "Techno",
+    "producer": "LRG",
+    "key": "7B",
+    "bpm": 120
+}, {
+    "id": 50,
+    "title": "dislikes,",
+    "artist": "Fluxion",
+    "album": "earum",
+    "albumcover": "cover10.jpg",
+    "label": "Recordeep",
+    "year": 1995,
+    "genre": "Dub-Techno",
+    "producer": "Daniel G",
+    "key": "6A",
+    "bpm": 120
+}, {
+    "id": 51,
+    "title": "or",
+    "artist": "Fluxion",
+    "album": "earum",
+    "albumcover": "cover10.jpg",
+    "label": "Recordeep",
+    "year": 1995,
+    "genre": "Dub-Techno",
+    "producer": "Martin Solveig",
+    "key": "12A",
+    "bpm": 105
+}, {
+    "id": 52,
+    "title": "avoids",
+    "artist": "Fluxion",
+    "album": "earum",
+    "albumcover": "cover10.jpg",
+    "label": "Recordeep",
+    "year": 1995,
+    "genre": "Dub-Techno",
+    "producer": "Adam A",
+    "key": "7B",
+    "bpm": 107
+}, {
+    "id": 53,
+    "title": "pleasure",
+    "artist": "Fluxion",
+    "album": "earum",
+    "albumcover": "cover10.jpg",
+    "label": "Recordeep",
+    "year": 1995,
+    "genre": "Dub-Techno",
+    "producer": "Andreas Carlson",
+    "key": "7B",
+    "bpm": 107
+}, {
+    "id": 54,
+    "title": "itself,",
+    "artist": "Fluxion",
+    "album": "earum",
+    "albumcover": "cover10.jpg",
+    "label": "Recordeep",
+    "year": 1995,
+    "genre": "Dub-Techno",
+    "producer": "Adam A",
+    "key": "8B",
+    "bpm": 100
+}, {
+    "id": 55,
+    "title": "because",
+    "artist": "Fluxion",
+    "album": "rerum",
+    "albumcover": "cover11.jpg",
+    "label": "Berg Audio",
+    "year": 2005,
+    "genre": "Dub-Techno",
+    "producer": "Andreas Carlson",
+    "key": "7B",
+    "bpm": 100
+}, {
+    "id": 56,
+    "title": "it",
+    "artist": "Fluxion",
+    "album": "rerum",
+    "albumcover": "cover11.jpg",
+    "label": "Berg Audio",
+    "year": 2005,
+    "genre": "Dub-Techno",
+    "producer": "Adam A",
+    "key": "8B",
+    "bpm": 107
+}, {
+    "id": 57,
+    "title": "is",
+    "artist": "Fluxion",
+    "album": "rerum",
+    "albumcover": "cover11.jpg",
+    "label": "Berg Audio",
+    "year": 2005,
+    "genre": "Dub-Techno",
+    "producer": "Martin Solveig",
+    "key": "8B",
+    "bpm": 105
+}, {
+    "id": 58,
+    "title": "pleasure,",
+    "artist": "Fluxion",
+    "album": "rerum",
+    "albumcover": "cover11.jpg",
+    "label": "Berg Audio",
+    "year": 2005,
+    "genre": "Dub-Techno",
+    "producer": "Sam B",
+    "key": "7B",
+    "bpm": 100
+}, {
+    "id": 59,
+    "title": "but",
+    "artist": "Fluxion",
+    "album": "rerum",
+    "albumcover": "cover11.jpg",
+    "label": "Berg Audio",
+    "year": 2005,
+    "genre": "Dub-Techno",
+    "producer": "Max Martin",
+    "key": "12A",
+    "bpm": 100
+}, {
+    "id": 60,
+    "title": "because",
+    "artist": "Fluxion",
+    "album": "tenetur",
+    "albumcover": "cover12.jpg",
+    "label": "Recordeep",
+    "year": 1995,
+    "genre": "Dub-Techno",
+    "producer": "Daniel G",
+    "key": "7B",
+    "bpm": 100
+}, {
+    "id": 61,
+    "title": "those",
+    "artist": "Fluxion",
+    "album": "tenetur",
+    "albumcover": "cover12.jpg",
+    "label": "Recordeep",
+    "year": 1995,
+    "genre": "Dub-Techno",
+    "producer": "Adam A",
+    "key": "7B",
+    "bpm": 105
+}, {
+    "id": 62,
+    "title": "who",
+    "artist": "Fluxion",
+    "album": "tenetur",
+    "albumcover": "cover12.jpg",
+    "label": "Recordeep",
+    "year": 1995,
+    "genre": "Dub-Techno",
+    "producer": "Martin Solveig",
+    "key": "6A",
+    "bpm": 107
+}, {
+    "id": 63,
+    "title": "do",
+    "artist": "Fluxion",
+    "album": "tenetur",
+    "albumcover": "cover12.jpg",
+    "label": "Recordeep",
+    "year": 1995,
+    "genre": "Dub-Techno",
+    "producer": "Max Martin",
+    "key": "6A",
+    "bpm": 120
+}, {
+    "id": 64,
+    "title": "not",
+    "artist": "Fluxion",
+    "album": "tenetur",
+    "albumcover": "cover12.jpg",
+    "label": "Recordeep",
+    "year": 1995,
+    "genre": "Dub-Techno",
+    "producer": "Martin Solveig",
+    "key": "6A",
+    "bpm": 105
+}, {
+    "id": 65,
+    "title": "know",
+    "artist": "Fluxion",
+    "album": "sapiente",
+    "albumcover": "cover13.jpg",
+    "label": "Berg Audio",
+    "year": 1995,
+    "genre": "Dub-Techno",
+    "producer": "Max Martin",
+    "key": "8B",
+    "bpm": 105
+}, {
+    "id": 66,
+    "title": "how",
+    "artist": "Fluxion",
+    "album": "sapiente",
+    "albumcover": "cover13.jpg",
+    "label": "Berg Audio",
+    "year": 1995,
+    "genre": "Dub-Techno",
+    "producer": "Daniel G",
+    "key": "6A",
+    "bpm": 100
+}, {
+    "id": 67,
+    "title": "to",
+    "artist": "Fluxion",
+    "album": "sapiente",
+    "albumcover": "cover13.jpg",
+    "label": "Berg Audio",
+    "year": 1995,
+    "genre": "Dub-Techno",
+    "producer": "Andreas Carlson",
+    "key": "12A",
+    "bpm": 100
+}, {
+    "id": 68,
+    "title": "pursue",
+    "artist": "Fluxion",
+    "album": "sapiente",
+    "albumcover": "cover13.jpg",
+    "label": "Berg Audio",
+    "year": 1995,
+    "genre": "Dub-Techno",
+    "producer": "Martin Solveig",
+    "key": "6A",
+    "bpm": 105
+}, {
+    "id": 69,
+    "title": "pleasure",
+    "artist": "Seb Zito",
+    "album": "sapiente",
+    "albumcover": "cover13.jpg",
+    "label": "Berg Audio",
+    "year": 1995,
+    "genre": "Dub-Techno",
+    "producer": "Adam A",
+    "key": "7B",
+    "bpm": 107
+}, {
+    "id": 70,
+    "title": "rationally",
+    "artist": "Seb Zito",
+    "album": "delectus",
+    "albumcover": "cover14.jpg",
+    "label": "Recordeep",
+    "year": 2000,
+    "genre": "Techno",
+    "producer": "Sam B",
+    "key": "12A",
+    "bpm": 120
+}, {
+    "id": 71,
+    "title": "encounter",
+    "artist": "Seb Zito",
+    "album": "delectus",
+    "albumcover": "cover14.jpg",
+    "label": "Recordeep",
+    "year": 2000,
+    "genre": "Techno",
+    "producer": "Martin Solveig",
+    "key": "8B",
+    "bpm": 105
+}, {
+    "id": 72,
+    "title": "consequences",
+    "artist": "Seb Zito",
+    "album": "delectus",
+    "albumcover": "cover14.jpg",
+    "label": "Recordeep",
+    "year": 2000,
+    "genre": "Techno",
+    "producer": "LRG",
+    "key": "12A",
+    "bpm": 107
+}, {
+    "id": 73,
+    "title": "that",
+    "artist": "Seb Zito",
+    "album": "delectus",
+    "albumcover": "cover14.jpg",
+    "label": "Recordeep",
+    "year": 2000,
+    "genre": "Techno",
+    "producer": "Sam B",
+    "key": "12A",
+    "bpm": 105
+}, {
+    "id": 74,
+    "title": "are",
+    "artist": "Seb Zito",
+    "album": "delectus",
+    "albumcover": "cover14.jpg",
+    "label": "Recordeep",
+    "year": 2000,
+    "genre": "Techno",
+    "producer": "Max Martin",
+    "key": "6A",
+    "bpm": 100
+}, {
+    "id": 75,
+    "title": "extremely",
+    "artist": "Seb Zito",
+    "album": "reiciendis",
+    "albumcover": "cover15.jpg",
+    "label": "Porslin Records",
+    "year": 2005,
+    "genre": "Techno",
+    "producer": "Sam B",
+    "key": "7B",
+    "bpm": 107
+}, {
+    "id": 76,
+    "title": "painful.",
+    "artist": "Seb Zito",
+    "album": "reiciendis",
+    "albumcover": "cover15.jpg",
+    "label": "Porslin Records",
+    "year": 2005,
+    "genre": "Techno",
+    "producer": "LRG",
+    "key": "7B",
+    "bpm": 120
+}, {
+    "id": 77,
+    "title": "Nor",
+    "artist": "Seb Zito",
+    "album": "reiciendis",
+    "albumcover": "cover15.jpg",
+    "label": "Porslin Records",
+    "year": 2005,
+    "genre": "Techno",
+    "producer": "Sam B",
+    "key": "6A",
+    "bpm": 100
+}, {
+    "id": 78,
+    "title": "again",
+    "artist": "Seb Zito",
+    "album": "reiciendis",
+    "albumcover": "cover15.jpg",
+    "label": "Porslin Records",
+    "year": 2005,
+    "genre": "Techno",
+    "producer": "Sam B",
+    "key": "7B",
+    "bpm": 120
+}, {
+    "id": 79,
+    "title": "is",
+    "artist": "Seb Zito",
+    "album": "reiciendis",
+    "albumcover": "cover15.jpg",
+    "label": "Porslin Records",
+    "year": 2005,
+    "genre": "Techno",
+    "producer": "Daniel G",
+    "key": "8B",
+    "bpm": 120
+}, {
+    "id": 80,
+    "title": "therewho",
+    "artist": "Seb Zito",
+    "album": "voluptatibus",
+    "albumcover": "cover16.jpg",
+    "label": "Berg Audio",
+    "year": 2000,
+    "genre": "House",
+    "producer": "LRG",
+    "key": "12A",
+    "bpm": 105
+}, {
+    "id": 81,
+    "title": "loves",
+    "artist": "Seb Zito",
+    "album": "voluptatibus",
+    "albumcover": "cover16.jpg",
+    "label": "Berg Audio",
+    "year": 2000,
+    "genre": "House",
+    "producer": "Daniel G",
+    "key": "7B",
+    "bpm": 120
+}, {
+    "id": 82,
+    "title": "or",
+    "artist": "Seb Zito",
+    "album": "voluptatibus",
+    "albumcover": "cover16.jpg",
+    "label": "Berg Audio",
+    "year": 2000,
+    "genre": "House",
+    "producer": "Martin Solveig",
+    "key": "7B",
+    "bpm": 100
+}, {
+    "id": 83,
+    "title": "pursues",
+    "artist": "Seb Zito",
+    "album": "voluptatibus",
+    "albumcover": "cover16.jpg",
+    "label": "Berg Audio",
+    "year": 2000,
+    "genre": "House",
+    "producer": "Daniel G",
+    "key": "12A",
+    "bpm": 107
+}, {
+    "id": 84,
+    "title": "or",
+    "artist": "Seb Zito",
+    "album": "voluptatibus",
+    "albumcover": "cover16.jpg",
+    "label": "Berg Audio",
+    "year": 2000,
+    "genre": "House",
+    "producer": "Martin Solveig",
+    "key": "12A",
+    "bpm": 105
+}, {
+    "id": 85,
+    "title": "desires",
+    "artist": "Seb Zito",
+    "album": "maiores",
+    "albumcover": "cover17.jpg",
+    "label": "Recordeep",
+    "year": 2005,
+    "genre": "Minimal House",
+    "producer": "LRG",
+    "key": "12A",
+    "bpm": 120
+}, {
+    "id": 86,
+    "title": "to",
+    "artist": "Seb Zito",
+    "album": "maiores",
+    "albumcover": "cover17.jpg",
+    "label": "Recordeep",
+    "year": 2005,
+    "genre": "Minimal House",
+    "producer": "Martin Solveig",
+    "key": "7B",
+    "bpm": 100
+}, {
+    "id": 87,
+    "title": "obtain",
+    "artist": "Seb Zito",
+    "album": "maiores",
+    "albumcover": "cover17.jpg",
+    "label": "Recordeep",
+    "year": 2005,
+    "genre": "Minimal House",
+    "producer": "LRG",
+    "key": "7B",
+    "bpm": 105
+}, {
+    "id": 88,
+    "title": "pain",
+    "artist": "Seb Zito",
+    "album": "maiores",
+    "albumcover": "cover17.jpg",
+    "label": "Recordeep",
+    "year": 2005,
+    "genre": "Minimal House",
+    "producer": "Martin Solveig",
+    "key": "12A",
+    "bpm": 107
+}, {
+    "id": 89,
+    "title": "of",
+    "artist": "Seb Zito",
+    "album": "maiores",
+    "albumcover": "cover17.jpg",
+    "label": "Recordeep",
+    "year": 2005,
+    "genre": "Minimal House",
+    "producer": "Adam A",
+    "key": "7B",
+    "bpm": 105
+}, {
+    "id": 90,
+    "title": "itself,",
+    "artist": "Seb Zito",
+    "album": "alias",
+    "albumcover": "cover18.jpg",
+    "label": "Star Dub",
+    "year": 1995,
+    "genre": "Acid",
+    "producer": "Martin Solveig",
+    "key": "6A",
+    "bpm": 100
+}, {
+    "id": 91,
+    "title": "because",
+    "artist": "Seb Zito",
+    "album": "alias",
+    "albumcover": "cover18.jpg",
+    "label": "Star Dub",
+    "year": 1995,
+    "genre": "Acid",
+    "producer": "Max Martin",
+    "key": "8B",
+    "bpm": 107
+}, {
+    "id": 92,
+    "title": "it",
+    "artist": "Etapp Kyle",
+    "album": "alias",
+    "albumcover": "cover18.jpg",
+    "label": "Star Dub",
+    "year": 1995,
+    "genre": "Acid",
+    "producer": "Max Martin",
+    "key": "12A",
+    "bpm": 107
+}, {
+    "id": 93,
+    "title": "is",
+    "artist": "Etapp Kyle",
+    "album": "alias",
+    "albumcover": "cover18.jpg",
+    "label": "Star Dub",
+    "year": 1995,
+    "genre": "Acid",
+    "producer": "Daniel G",
+    "key": "12A",
+    "bpm": 120
+}, {
+    "id": 94,
+    "title": "pain,",
+    "artist": "Etapp Kyle",
+    "album": "alias",
+    "albumcover": "cover18.jpg",
+    "label": "Star Dub",
+    "year": 1995,
+    "genre": "Acid",
+    "producer": "Sam B",
+    "key": "7B",
+    "bpm": 100
+}, {
+    "id": 95,
+    "title": "but",
+    "artist": "Etapp Kyle",
+    "album": "consequatur",
+    "albumcover": "cover19.jpg",
+    "label": "Star Dub",
+    "year": 1995,
+    "genre": "Acid",
+    "producer": "Martin Solveig",
+    "key": "6A",
+    "bpm": 107
+}, {
+    "id": 96,
+    "title": "because",
+    "artist": "Etapp Kyle",
+    "album": "consequatur",
+    "albumcover": "cover19.jpg",
+    "label": "Star Dub",
+    "year": 1995,
+    "genre": "Acid",
+    "producer": "Adam A",
+    "key": "7B",
+    "bpm": 107
+}, {
+    "id": 97,
+    "title": "occasionally",
+    "artist": "Etapp Kyle",
+    "album": "consequatur",
+    "albumcover": "cover19.jpg",
+    "label": "Star Dub",
+    "year": 1995,
+    "genre": "Acid",
+    "producer": "Max Martin",
+    "key": "6A",
+    "bpm": 105
+}, {
+    "id": 98,
+    "title": "circumstances",
+    "artist": "Etapp Kyle",
+    "album": "consequatur",
+    "albumcover": "cover19.jpg",
+    "label": "Star Dub",
+    "year": 1995,
+    "genre": "Acid",
+    "producer": "Daniel G",
+    "key": "12A",
+    "bpm": 100
+}, {
+    "id": 99,
+    "title": "occur",
+    "artist": "Etapp Kyle",
+    "album": "consequatur",
+    "albumcover": "cover19.jpg",
+    "label": "Star Dub",
+    "year": 1995,
+    "genre": "Acid",
+    "producer": "Adam A",
+    "key": "8B",
+    "bpm": 100
+}, {
+    "id": 100,
+    "title": "in",
+    "artist": "Etapp Kyle",
+    "album": "easy",
+    "albumcover": "cover20.jpg",
+    "label": "Star Dub",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "LRG",
+    "key": "12A",
+    "bpm": 100
+}, {
+    "id": 101,
+    "title": "which",
+    "artist": "Etapp Kyle",
+    "album": "easy",
+    "albumcover": "cover20.jpg",
+    "label": "Star Dub",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "Martin Solveig",
+    "key": "12A",
+    "bpm": 100
+}, {
+    "id": 102,
+    "title": "toil",
+    "artist": "Etapp Kyle",
+    "album": "easy",
+    "albumcover": "cover20.jpg",
+    "label": "Star Dub",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "Martin Solveig",
+    "key": "12A",
+    "bpm": 100
+}, {
+    "id": 103,
+    "title": "and",
+    "artist": "Etapp Kyle",
+    "album": "easy",
+    "albumcover": "cover20.jpg",
+    "label": "Star Dub",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "LRG",
+    "key": "12A",
+    "bpm": 105
+}, {
+    "id": 104,
+    "title": "pain",
+    "artist": "Etapp Kyle",
+    "album": "easy",
+    "albumcover": "cover20.jpg",
+    "label": "Star Dub",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "Adam A",
+    "key": "6A",
+    "bpm": 105
+}, {
+    "id": 105,
+    "title": "can",
+    "artist": "Etapp Kyle",
+    "album": "to",
+    "albumcover": "cover21.jpg",
+    "label": "Star Dub",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "Adam A",
+    "key": "7B",
+    "bpm": 105
+}, {
+    "id": 106,
+    "title": "procure",
+    "artist": "Etapp Kyle",
+    "album": "to",
+    "albumcover": "cover21.jpg",
+    "label": "Star Dub",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "Max Martin",
+    "key": "7B",
+    "bpm": 120
+}, {
+    "id": 107,
+    "title": "him",
+    "artist": "Etapp Kyle",
+    "album": "to",
+    "albumcover": "cover21.jpg",
+    "label": "Star Dub",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "Daniel G",
+    "key": "6A",
+    "bpm": 120
+}, {
+    "id": 108,
+    "title": "some",
+    "artist": "Etapp Kyle",
+    "album": "to",
+    "albumcover": "cover21.jpg",
+    "label": "Star Dub",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "LRG",
+    "key": "6A",
+    "bpm": 107
+}, {
+    "id": 109,
+    "title": "great",
+    "artist": "Etapp Kyle",
+    "album": "to",
+    "albumcover": "cover21.jpg",
+    "label": "Star Dub",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "LRG",
+    "key": "6A",
+    "bpm": 120
+}, {
+    "id": 110,
+    "title": "pleasure.",
+    "artist": "Etapp Kyle",
+    "album": "distinguish.",
+    "albumcover": "cover22.jpg",
+    "label": "Berg Audio",
+    "year": 1995,
+    "genre": "Minimal House",
+    "producer": "Adam A",
+    "key": "7B",
+    "bpm": 107
+}, {
+    "id": 111,
+    "title": "To",
+    "artist": "Etapp Kyle",
+    "album": "distinguish.",
+    "albumcover": "cover22.jpg",
+    "label": "Berg Audio",
+    "year": 1995,
+    "genre": "Minimal House",
+    "producer": "LRG",
+    "key": "12A",
+    "bpm": 105
+}, {
+    "id": 112,
+    "title": "take",
+    "artist": "Etapp Kyle",
+    "album": "distinguish.",
+    "albumcover": "cover22.jpg",
+    "label": "Berg Audio",
+    "year": 1995,
+    "genre": "Minimal House",
+    "producer": "Adam A",
+    "key": "12A",
+    "bpm": 120
+}, {
+    "id": 113,
+    "title": "a",
+    "artist": "Etapp Kyle",
+    "album": "distinguish.",
+    "albumcover": "cover22.jpg",
+    "label": "Berg Audio",
+    "year": 1995,
+    "genre": "Minimal House",
+    "producer": "Sam B",
+    "key": "7B",
+    "bpm": 107
+}, {
+    "id": 114,
+    "title": "trivial",
+    "artist": "Etapp Kyle",
+    "album": "distinguish.",
+    "albumcover": "cover22.jpg",
+    "label": "Berg Audio",
+    "year": 1995,
+    "genre": "Minimal House",
+    "producer": "Daniel G",
+    "key": "6A",
+    "bpm": 100
+}, {
+    "id": 115,
+    "title": "example,",
+    "artist": "Michael",
+    "album": "In",
+    "albumcover": "cover23.jpg",
+    "label": "Echochord",
+    "year": 1995,
+    "genre": "Acid",
+    "producer": "Martin Solveig",
+    "key": "6A",
+    "bpm": 100
+}, {
+    "id": 116,
+    "title": "which",
+    "artist": "Michael",
+    "album": "In",
+    "albumcover": "cover23.jpg",
+    "label": "Echochord",
+    "year": 1995,
+    "genre": "Acid",
+    "producer": "Max Martin",
+    "key": "12A",
+    "bpm": 120
+}, {
+    "id": 117,
+    "title": "of",
+    "artist": "Michael",
+    "album": "In",
+    "albumcover": "cover23.jpg",
+    "label": "Echochord",
+    "year": 1995,
+    "genre": "Acid",
+    "producer": "Daniel G",
+    "key": "8B",
+    "bpm": 105
+}, {
+    "id": 118,
+    "title": "us",
+    "artist": "Michael",
+    "album": "In",
+    "albumcover": "cover23.jpg",
+    "label": "Echochord",
+    "year": 1995,
+    "genre": "Acid",
+    "producer": "Andreas Carlson",
+    "key": "7B",
+    "bpm": 100
+}, {
+    "id": 119,
+    "title": "ever",
+    "artist": "Michael",
+    "album": "In",
+    "albumcover": "cover23.jpg",
+    "label": "Echochord",
+    "year": 1995,
+    "genre": "Acid",
+    "producer": "Sam B",
+    "key": "7B",
+    "bpm": 107
+}, {
+    "id": 120,
+    "title": "undertakes",
+    "artist": "Michael",
+    "album": "a",
+    "albumcover": "cover24.jpg",
+    "label": "Star Dub",
+    "year": 2000,
+    "genre": "House",
+    "producer": "LRG",
+    "key": "12A",
+    "bpm": 100
+}, {
+    "id": 121,
+    "title": "laborious",
+    "artist": "Michael",
+    "album": "a",
+    "albumcover": "cover24.jpg",
+    "label": "Star Dub",
+    "year": 2000,
+    "genre": "House",
+    "producer": "Andreas Carlson",
+    "key": "12A",
+    "bpm": 107
+}, {
+    "id": 122,
+    "title": "physical",
+    "artist": "Michael",
+    "album": "a",
+    "albumcover": "cover24.jpg",
+    "label": "Star Dub",
+    "year": 2000,
+    "genre": "House",
+    "producer": "Adam A",
+    "key": "7B",
+    "bpm": 100
+}, {
+    "id": 123,
+    "title": "exercise,",
+    "artist": "Michael",
+    "album": "a",
+    "albumcover": "cover24.jpg",
+    "label": "Star Dub",
+    "year": 2000,
+    "genre": "House",
+    "producer": "Martin Solveig",
+    "key": "7B",
+    "bpm": 120
+}, {
+    "id": 124,
+    "title": "except",
+    "artist": "Michael",
+    "album": "a",
+    "albumcover": "cover24.jpg",
+    "label": "Star Dub",
+    "year": 2000,
+    "genre": "House",
+    "producer": "Max Martin",
+    "key": "12A",
+    "bpm": 107
+}, {
+    "id": 125,
+    "title": "to",
+    "artist": "Michael",
+    "album": "free",
+    "albumcover": "cover25.jpg",
+    "label": "Porslin Records",
+    "year": 2005,
+    "genre": "Dub-Techno",
+    "producer": "LRG",
+    "key": "12A",
+    "bpm": 107
+}, {
+    "id": 126,
+    "title": "obtain",
+    "artist": "Michael",
+    "album": "free",
+    "albumcover": "cover25.jpg",
+    "label": "Porslin Records",
+    "year": 2005,
+    "genre": "Dub-Techno",
+    "producer": "Daniel G",
+    "key": "8B",
+    "bpm": 120
+}, {
+    "id": 127,
+    "title": "some",
+    "artist": "Michael",
+    "album": "free",
+    "albumcover": "cover25.jpg",
+    "label": "Porslin Records",
+    "year": 2005,
+    "genre": "Dub-Techno",
+    "producer": "Martin Solveig",
+    "key": "8B",
+    "bpm": 107
+}, {
+    "id": 128,
+    "title": "advantage",
+    "artist": "Michael",
+    "album": "free",
+    "albumcover": "cover25.jpg",
+    "label": "Porslin Records",
+    "year": 2005,
+    "genre": "Dub-Techno",
+    "producer": "Martin Solveig",
+    "key": "6A",
+    "bpm": 100
+}, {
+    "id": 129,
+    "title": "from",
+    "artist": "Michael",
+    "album": "free",
+    "albumcover": "cover25.jpg",
+    "label": "Porslin Records",
+    "year": 2005,
+    "genre": "Dub-Techno",
+    "producer": "Andreas Carlson",
+    "key": "7B",
+    "bpm": 105
+}, {
+    "id": 130,
+    "title": "it?",
+    "artist": "Michael",
+    "album": "hour,",
+    "albumcover": "cover26.jpg",
+    "label": "Star Dub",
+    "year": 1995,
+    "genre": "Minimal House",
+    "producer": "Andreas Carlson",
+    "key": "6A",
+    "bpm": 107
+}, {
+    "id": 131,
+    "title": "But",
+    "artist": "Michael",
+    "album": "hour,",
+    "albumcover": "cover26.jpg",
+    "label": "Star Dub",
+    "year": 1995,
+    "genre": "Minimal House",
+    "producer": "Sam B",
+    "key": "7B",
+    "bpm": 107
+}, {
+    "id": 132,
+    "title": "who",
+    "artist": "Michael",
+    "album": "hour,",
+    "albumcover": "cover26.jpg",
+    "label": "Star Dub",
+    "year": 1995,
+    "genre": "Minimal House",
+    "producer": "Max Martin",
+    "key": "12A",
+    "bpm": 120
+}, {
+    "id": 133,
+    "title": "has",
+    "artist": "Michael",
+    "album": "hour,",
+    "albumcover": "cover26.jpg",
+    "label": "Star Dub",
+    "year": 1995,
+    "genre": "Minimal House",
+    "producer": "Adam A",
+    "key": "6A",
+    "bpm": 105
+}, {
+    "id": 134,
+    "title": "any",
+    "artist": "Michael",
+    "album": "hour,",
+    "albumcover": "cover26.jpg",
+    "label": "Star Dub",
+    "year": 1995,
+    "genre": "Minimal House",
+    "producer": "Adam A",
+    "key": "6A",
+    "bpm": 105
+}, {
+    "id": 135,
+    "title": "right",
+    "artist": "Michael",
+    "album": "when",
+    "albumcover": "cover27.jpg",
+    "label": "Echochord",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "Martin Solveig",
+    "key": "7B",
+    "bpm": 120
+}, {
+    "id": 136,
+    "title": "to",
+    "artist": "Michael",
+    "album": "when",
+    "albumcover": "cover27.jpg",
+    "label": "Echochord",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "Sam B",
+    "key": "6A",
+    "bpm": 100
+}, {
+    "id": 137,
+    "title": "find",
+    "artist": "Michael",
+    "album": "when",
+    "albumcover": "cover27.jpg",
+    "label": "Echochord",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "Andreas Carlson",
+    "key": "8B",
+    "bpm": 100
+}, {
+    "id": 138,
+    "title": "fault",
+    "artist": "Dave Chappelle",
+    "album": "when",
+    "albumcover": "cover27.jpg",
+    "label": "Echochord",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "Adam A",
+    "key": "6A",
+    "bpm": 105
+}, {
+    "id": 139,
+    "title": "with",
+    "artist": "Dave Chappelle",
+    "album": "when",
+    "albumcover": "cover27.jpg",
+    "label": "Echochord",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "Martin Solveig",
+    "key": "6A",
+    "bpm": 100
+}, {
+    "id": 140,
+    "title": "a",
+    "artist": "Dave Chappelle",
+    "album": "our",
+    "albumcover": "cover28.jpg",
+    "label": "Porslin Records",
+    "year": 2000,
+    "genre": "House",
+    "producer": "Andreas Carlson",
+    "key": "6A",
+    "bpm": 107
+}, {
+    "id": 141,
+    "title": "man",
+    "artist": "Dave Chappelle",
+    "album": "our",
+    "albumcover": "cover28.jpg",
+    "label": "Porslin Records",
+    "year": 2000,
+    "genre": "House",
+    "producer": "Martin Solveig",
+    "key": "8B",
+    "bpm": 105
+}, {
+    "id": 142,
+    "title": "who",
+    "artist": "Dave Chappelle",
+    "album": "our",
+    "albumcover": "cover28.jpg",
+    "label": "Porslin Records",
+    "year": 2000,
+    "genre": "House",
+    "producer": "Adam A",
+    "key": "6A",
+    "bpm": 107
+}, {
+    "id": 143,
+    "title": "chooses",
+    "artist": "Dave Chappelle",
+    "album": "our",
+    "albumcover": "cover28.jpg",
+    "label": "Porslin Records",
+    "year": 2000,
+    "genre": "House",
+    "producer": "Andreas Carlson",
+    "key": "7B",
+    "bpm": 107
+}, {
+    "id": 144,
+    "title": "to",
+    "artist": "Dave Chappelle",
+    "album": "our",
+    "albumcover": "cover28.jpg",
+    "label": "Porslin Records",
+    "year": 2000,
+    "genre": "House",
+    "producer": "Andreas Carlson",
+    "key": "8B",
+    "bpm": 107
+}, {
+    "id": 145,
+    "title": "enjoy",
+    "artist": "Dave Chappelle",
+    "album": "power",
+    "albumcover": "cover29.jpg",
+    "label": "Star Dub",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "Daniel G",
+    "key": "6A",
+    "bpm": 100
+}, {
+    "id": 146,
+    "title": "a",
+    "artist": "Dave Chappelle",
+    "album": "power",
+    "albumcover": "cover29.jpg",
+    "label": "Star Dub",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "LRG",
+    "key": "7B",
+    "bpm": 107
+}, {
+    "id": 147,
+    "title": "pleasure",
+    "artist": "Dave Chappelle",
+    "album": "power",
+    "albumcover": "cover29.jpg",
+    "label": "Star Dub",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "Max Martin",
+    "key": "7B",
+    "bpm": 100
+}, {
+    "id": 148,
+    "title": "that",
+    "artist": "Dave Chappelle",
+    "album": "power",
+    "albumcover": "cover29.jpg",
+    "label": "Star Dub",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "Sam B",
+    "key": "6A",
+    "bpm": 100
+}, {
+    "id": 149,
+    "title": "has",
+    "artist": "Dave Chappelle",
+    "album": "power",
+    "albumcover": "cover29.jpg",
+    "label": "Star Dub",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "Adam A",
+    "key": "12A",
+    "bpm": 120
+}, {
+    "id": 150,
+    "title": "no",
+    "artist": "Dave Chappelle",
+    "album": "of",
+    "albumcover": "cover30.jpg",
+    "label": "Star Dub",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "Martin Solveig",
+    "key": "8B",
+    "bpm": 105
+}, {
+    "id": 151,
+    "title": "annoying",
+    "artist": "Dave Chappelle",
+    "album": "of",
+    "albumcover": "cover30.jpg",
+    "label": "Star Dub",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "Sam B",
+    "key": "8B",
+    "bpm": 120
+}, {
+    "id": 152,
+    "title": "consequences,",
+    "artist": "Dave Chappelle",
+    "album": "of",
+    "albumcover": "cover30.jpg",
+    "label": "Star Dub",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "Adam A",
+    "key": "8B",
+    "bpm": 120
+}, {
+    "id": 153,
+    "title": "or",
+    "artist": "Dave Chappelle",
+    "album": "of",
+    "albumcover": "cover30.jpg",
+    "label": "Star Dub",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "Adam A",
+    "key": "12A",
+    "bpm": 107
+}, {
+    "id": 154,
+    "title": "one",
+    "artist": "Dave Chappelle",
+    "album": "of",
+    "albumcover": "cover30.jpg",
+    "label": "Star Dub",
+    "year": 2005,
+    "genre": "Acid",
+    "producer": "LRG",
+    "key": "12A",
+    "bpm": 100
+}, {
+    "id": 155,
+    "title": "who",
+    "artist": "Dave Chappelle",
+    "album": "choice",
+    "albumcover": "cover31.jpg",
+    "label": "Berg Audio",
+    "year": 1990,
+    "genre": "Acid",
+    "producer": "Martin Solveig",
+    "key": "6A",
+    "bpm": 105
+}, {
+    "id": 156,
+    "title": "avoids",
+    "artist": "Dave Chappelle",
+    "album": "choice",
+    "albumcover": "cover31.jpg",
+    "label": "Berg Audio",
+    "year": 1990,
+    "genre": "Acid",
+    "producer": "Sam B",
+    "key": "6A",
+    "bpm": 120
+}, {
+    "id": 157,
+    "title": "a",
+    "artist": "Dave Chappelle",
+    "album": "choice",
+    "albumcover": "cover31.jpg",
+    "label": "Berg Audio",
+    "year": 1990,
+    "genre": "Acid",
+    "producer": "Max Martin",
+    "key": "8B",
+    "bpm": 107
+}, {
+    "id": 158,
+    "title": "pain",
+    "artist": "Dave Chappelle",
+    "album": "choice",
+    "albumcover": "cover31.jpg",
+    "label": "Berg Audio",
+    "year": 1990,
+    "genre": "Acid",
+    "producer": "Sam B",
+    "key": "8B",
+    "bpm": 100
+}, {
+    "id": 159,
+    "title": "that",
+    "artist": "Dave Chappelle",
+    "album": "choice",
+    "albumcover": "cover31.jpg",
+    "label": "Berg Audio",
+    "year": 1990,
+    "genre": "Acid",
+    "producer": "Martin Solveig",
+    "key": "6A",
+    "bpm": 105
+}, {
+    "id": 160,
+    "title": "produces",
+    "artist": "Dave Chappelle",
+    "album": "is",
+    "albumcover": "cover32.jpg",
+    "label": "Echochord",
+    "year": 2000,
+    "genre": "Minimal House",
+    "producer": "Andreas Carlson",
+    "key": "6A",
+    "bpm": 100
+}, {
+    "id": 161,
+    "title": "no",
+    "artist": "Coop-Victor",
+    "album": "is",
+    "albumcover": "cover32.jpg",
+    "label": "Echochord",
+    "year": 2000,
+    "genre": "Minimal House",
+    "producer": "Daniel G",
+    "key": "12A",
+    "bpm": 120
+}, {
+    "id": 162,
+    "title": "resultant",
+    "artist": "Coop-Victor",
+    "album": "is",
+    "albumcover": "cover32.jpg",
+    "label": "Echochord",
+    "year": 2000,
+    "genre": "Minimal House",
+    "producer": "Sam B",
+    "key": "6A",
+    "bpm": 107
+}];
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -21197,30 +23386,36 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var FilterView = function (_React$Component) {
     _inherits(FilterView, _React$Component);
 
-    function FilterView() {
+    function FilterView(props) {
         _classCallCheck(this, FilterView);
 
-        return _possibleConstructorReturn(this, (FilterView.__proto__ || Object.getPrototypeOf(FilterView)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (FilterView.__proto__ || Object.getPrototypeOf(FilterView)).call(this, props));
+
+        _this.props.dataStore.connect(_this);
+        return _this;
     }
 
     _createClass(FilterView, [{
-        key: "sayHello",
-        value: function sayHello() {
-            console.log("hello");
+        key: "filterToggle",
+        value: function filterToggle(e) {
+            this.props.dataStore.toggleFilter(e.target.name);
         }
     }, {
         key: "render",
         value: function render() {
+
+            var filterState = this.props.dataStore.getFilters();
+
             return _react2.default.createElement(
                 "ul",
                 { className: "filter-group" },
                 _react2.default.createElement(
                     "li",
-                    { className: "filter-item", onClick: this.sayHello },
+                    { className: "filter-item" },
                     _react2.default.createElement(
                         "label",
                         { className: "filter-switch" },
-                        _react2.default.createElement("input", { type: "checkbox" }),
+                        _react2.default.createElement("input", { type: "checkbox", onChange: this.filterToggle.bind(this), name: "album", checked: filterState.album }),
                         _react2.default.createElement("span", { className: "filter-switch-slider" })
                     ),
                     _react2.default.createElement(
@@ -21235,7 +23430,7 @@ var FilterView = function (_React$Component) {
                     _react2.default.createElement(
                         "label",
                         { className: "filter-switch" },
-                        _react2.default.createElement("input", { type: "checkbox" }),
+                        _react2.default.createElement("input", { type: "checkbox", onChange: this.filterToggle.bind(this), name: "artist", checked: filterState.artist }),
                         _react2.default.createElement("span", { className: "filter-switch-slider" })
                     ),
                     _react2.default.createElement(
@@ -21250,7 +23445,7 @@ var FilterView = function (_React$Component) {
                     _react2.default.createElement(
                         "label",
                         { className: "filter-switch" },
-                        _react2.default.createElement("input", { type: "checkbox" }),
+                        _react2.default.createElement("input", { type: "checkbox", onChange: this.filterToggle.bind(this), name: "label", checked: filterState.label }),
                         _react2.default.createElement("span", { className: "filter-switch-slider" })
                     ),
                     _react2.default.createElement(
@@ -21265,7 +23460,7 @@ var FilterView = function (_React$Component) {
                     _react2.default.createElement(
                         "label",
                         { className: "filter-switch" },
-                        _react2.default.createElement("input", { type: "checkbox" }),
+                        _react2.default.createElement("input", { type: "checkbox", onChange: this.filterToggle.bind(this), name: "genre", checked: filterState.genre }),
                         _react2.default.createElement("span", { className: "filter-switch-slider" })
                     ),
                     _react2.default.createElement(
@@ -21280,7 +23475,7 @@ var FilterView = function (_React$Component) {
                     _react2.default.createElement(
                         "label",
                         { className: "filter-switch" },
-                        _react2.default.createElement("input", { type: "checkbox" }),
+                        _react2.default.createElement("input", { type: "checkbox", onChange: this.filterToggle.bind(this), name: "producer", checked: filterState.producer }),
                         _react2.default.createElement("span", { className: "filter-switch-slider" })
                     ),
                     _react2.default.createElement(
@@ -21295,7 +23490,7 @@ var FilterView = function (_React$Component) {
                     _react2.default.createElement(
                         "label",
                         { className: "filter-switch" },
-                        _react2.default.createElement("input", { type: "checkbox" }),
+                        _react2.default.createElement("input", { type: "checkbox", onChange: this.filterToggle.bind(this), name: "bpm", checked: filterState.bpm }),
                         _react2.default.createElement("span", { className: "filter-switch-slider" })
                     ),
                     _react2.default.createElement(
@@ -21310,7 +23505,7 @@ var FilterView = function (_React$Component) {
                     _react2.default.createElement(
                         "label",
                         { className: "filter-switch" },
-                        _react2.default.createElement("input", { type: "checkbox" }),
+                        _react2.default.createElement("input", { type: "checkbox", onChange: this.filterToggle.bind(this), name: "key", checked: filterState.key }),
                         _react2.default.createElement("span", { className: "filter-switch-slider" })
                     ),
                     _react2.default.createElement(
@@ -21325,7 +23520,7 @@ var FilterView = function (_React$Component) {
                     _react2.default.createElement(
                         "label",
                         { className: "filter-switch" },
-                        _react2.default.createElement("input", { type: "checkbox" }),
+                        _react2.default.createElement("input", { type: "checkbox", onChange: this.filterToggle.bind(this), name: "year", checked: filterState.year }),
                         _react2.default.createElement("span", { className: "filter-switch-slider" })
                     ),
                     _react2.default.createElement(
@@ -21344,7 +23539,7 @@ var FilterView = function (_React$Component) {
 module.exports = FilterView;
 
 /***/ }),
-/* 33 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21352,7 +23547,7 @@ module.exports = FilterView;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -21372,121 +23567,133 @@ var CurrentSongView = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (CurrentSongView.__proto__ || Object.getPrototypeOf(CurrentSongView)).call(this, props));
 
-        _this.state = {
-            title: "Hej"
-        };
+        _this.props.dataStore.connect(_this);
         return _this;
     }
 
     _createClass(CurrentSongView, [{
-        key: "render",
+        key: 'render',
         value: function render() {
 
+            var currentTrack = this.props.dataStore.getSelectedTrack();
+
+            var divStyle = {
+                backgroundImage: 'url(assets/img/' + currentTrack.albumcover + ')'
+            };
+
             return _react2.default.createElement(
-                "section",
-                { className: "middle_top" },
-                _react2.default.createElement("img", { className: "waveform", src: "assets/img/waveform.png" }),
-                _react2.default.createElement("section", { className: "background" }),
+                'section',
+                { className: 'middle_top' },
+                _react2.default.createElement('img', { className: 'waveform', src: 'assets/img/waveform.png' }),
+                _react2.default.createElement('section', { className: 'background', style: divStyle }),
                 _react2.default.createElement(
-                    "ul",
-                    { className: "trackinfo-group" },
+                    'ul',
+                    { className: 'trackinfo-group' },
                     _react2.default.createElement(
-                        "li",
-                        { className: "trackinfo-item" },
+                        'li',
+                        { className: 'trackinfo-item' },
                         _react2.default.createElement(
-                            "span",
-                            { className: "attribute" },
-                            " Title: "
+                            'span',
+                            { className: 'attribute' },
+                            ' Title: '
                         ),
                         _react2.default.createElement(
-                            "span",
-                            { className: "value" },
-                            " ",
-                            self.state.title
+                            'span',
+                            { className: 'value' },
+                            ' ',
+                            currentTrack.title
                         )
                     ),
                     _react2.default.createElement(
-                        "li",
-                        { className: "trackinfo-item" },
+                        'li',
+                        { className: 'trackinfo-item' },
                         _react2.default.createElement(
-                            "span",
-                            { className: "attribute" },
-                            " Artist: "
+                            'span',
+                            { className: 'attribute' },
+                            ' Artist: '
                         ),
                         _react2.default.createElement(
-                            "span",
-                            { className: "value" },
-                            " 2030 "
+                            'span',
+                            { className: 'value' },
+                            ' ',
+                            currentTrack.artist,
+                            ' '
                         )
                     ),
                     _react2.default.createElement(
-                        "li",
-                        { className: "trackinfo-item" },
+                        'li',
+                        { className: 'trackinfo-item' },
                         _react2.default.createElement(
-                            "span",
-                            { className: "attribute" },
-                            " Album: "
+                            'span',
+                            { className: 'attribute' },
+                            ' Album: '
                         ),
                         _react2.default.createElement(
-                            "span",
-                            { className: "value" },
-                            " Timeworm EP"
+                            'span',
+                            { className: 'value' },
+                            ' ',
+                            currentTrack.album
                         )
                     ),
                     _react2.default.createElement(
-                        "li",
-                        { className: "trackinfo-item" },
+                        'li',
+                        { className: 'trackinfo-item' },
                         _react2.default.createElement(
-                            "span",
-                            { className: "attribute" },
-                            " Label: "
+                            'span',
+                            { className: 'attribute' },
+                            ' Label: '
                         ),
                         _react2.default.createElement(
-                            "span",
-                            { className: "value" },
-                            " Black Crow Records"
+                            'span',
+                            { className: 'value' },
+                            ' ',
+                            currentTrack.label
                         )
                     ),
                     _react2.default.createElement(
-                        "li",
-                        { className: "trackinfo-item" },
+                        'li',
+                        { className: 'trackinfo-item' },
                         _react2.default.createElement(
-                            "span",
-                            { className: "attribute" },
-                            " Year: "
+                            'span',
+                            { className: 'attribute' },
+                            ' Year: '
                         ),
                         _react2.default.createElement(
-                            "span",
-                            { className: "value" },
-                            " 2016 "
+                            'span',
+                            { className: 'value' },
+                            currentTrack.year,
+                            ' '
                         )
                     ),
                     _react2.default.createElement(
-                        "li",
-                        { className: "trackinfo-item" },
+                        'li',
+                        { className: 'trackinfo-item' },
                         _react2.default.createElement(
-                            "span",
-                            { className: "attribute" },
-                            " Genre: "
+                            'span',
+                            { className: 'attribute' },
+                            ' Genre: '
                         ),
                         _react2.default.createElement(
-                            "span",
-                            { className: "value" },
-                            " Electronic"
+                            'span',
+                            { className: 'value' },
+                            ' ',
+                            currentTrack.genre
                         )
                     ),
                     _react2.default.createElement(
-                        "li",
-                        { className: "trackinfo-item" },
+                        'li',
+                        { className: 'trackinfo-item' },
                         _react2.default.createElement(
-                            "span",
-                            { className: "attribute" },
-                            " Producer: "
+                            'span',
+                            { className: 'attribute' },
+                            ' Producer: '
                         ),
                         _react2.default.createElement(
-                            "span",
-                            { className: "value" },
-                            " Nico Campanella "
+                            'span',
+                            { className: 'value' },
+                            ' ',
+                            currentTrack.producer,
+                            ' '
                         )
                     )
                 )
@@ -21500,6 +23707,112 @@ var CurrentSongView = function (_React$Component) {
 ;
 
 module.exports = CurrentSongView;
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var UpcomingSingleTrack = function (_React$Component) {
+    _inherits(UpcomingSingleTrack, _React$Component);
+
+    function UpcomingSingleTrack(props) {
+        _classCallCheck(this, UpcomingSingleTrack);
+
+        return _possibleConstructorReturn(this, (UpcomingSingleTrack.__proto__ || Object.getPrototypeOf(UpcomingSingleTrack)).call(this, props));
+        //Should be moved to parent
+    }
+
+    _createClass(UpcomingSingleTrack, [{
+        key: "clicked",
+        value: function clicked() {
+            this.props.parent.props.dataStore.setSelectedTrackId(this.props.track.id);
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            console.log("UpcomingSingleTrack rendering!");
+            var src = this.props.track.albumcover;
+            return _react2.default.createElement("img", { onClick: this.clicked.bind(this), className: "recommended", src: "assets/img/" + src });
+        }
+    }]);
+
+    return UpcomingSingleTrack;
+}(_react2.default.Component);
+
+var UpcomingView = function (_React$Component2) {
+    _inherits(UpcomingView, _React$Component2);
+
+    function UpcomingView(props) {
+        _classCallCheck(this, UpcomingView);
+
+        var _this2 = _possibleConstructorReturn(this, (UpcomingView.__proto__ || Object.getPrototypeOf(UpcomingView)).call(this, props));
+
+        _this2.props.dataStore.connect(_this2);
+        return _this2;
+    }
+
+    _createClass(UpcomingView, [{
+        key: "render",
+        value: function render() {
+            console.log("UpcomingView rendering!");
+
+            var upcoming = this.props.dataStore.getUpcoming();
+            var self = this;
+            return _react2.default.createElement(
+                "section",
+                null,
+                _react2.default.createElement(
+                    "section",
+                    { className: "middle_bar" },
+                    _react2.default.createElement(
+                        "h2",
+                        { className: "suggestion" },
+                        " Upcoming: TITLE - ARTIST"
+                    ),
+                    _react2.default.createElement(
+                        "h2",
+                        { className: "info" },
+                        " ",
+                        upcoming.matches,
+                        " matches / ",
+                        upcoming.filtered,
+                        " filtered"
+                    )
+                ),
+                _react2.default.createElement(
+                    "section",
+                    { className: "middle_bottom" },
+                    upcoming.tracks.map(function (track, index) {
+                        return _react2.default.createElement(UpcomingSingleTrack, { parent: self, dataStore: self.props.dataStore, track: track, key: track.id });
+                    })
+                )
+            );
+        }
+    }]);
+
+    return UpcomingView;
+}(_react2.default.Component);
+
+;
+
+module.exports = UpcomingView;
 
 /***/ })
 /******/ ]);

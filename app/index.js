@@ -1,17 +1,11 @@
 import React from 'react';
 var ReactDOM = require('react-dom');
 
-var FilterView = require("./views/FilterView.js");
-var CurrentSongView = require("./views/CurrentSongView.js");
+var MainView = require("./views/MainView.js");
+
 
 ReactDOM.render(
 	(
-        <FilterView />
+        <MainView />
 	),
-document.getElementById("filters"));
-
-ReactDOM.render(
-	(
-        <CurrentSongView />
-	),
-document.getElementById("currentSongView"));
+document.getElementById("body"));
